@@ -1,5 +1,12 @@
 language: python
 python:
-  - '3.6'
+- '3.6'
 script:
-  - pytest times_test.py
+- pytest times_test.py
+deploy:
+  provider: s3
+  access_key_id: AKIAIQDPEQQHA337B33A
+  secret_access_key:
+    secure: IMV/dpbt85SrbDPC22p1FT3cGzoEAYcesv3Nf5W4s3YqvraG/miLIRjMPqopd3b/QBbgLw5pcJMsBnNbwFLLmE7vJUCNCXfFEtGSN9Lkna35wC0ce4INpGhidA7yYhQhKQeWLhY2j/jvaXa1zUK+kQsUcpHfdf9lX4cNxERrnVddHAGtJFi5NdxtLtpnERUiK8qQ4IKGgTsG6wp347s5jZLF2yLiFghpF36Y9oRfwv8tDSRao498N7RBfpd2/JRq2ga7uWkX3zE7lxMkfSP8H8eN5B+CEuqSv3iVb+r+VQUNrPcj8XshBHBqAaxGDwbV76Kmtyjno0flx6Bba2N9grxh3o7RxVhzpfHxn4tu6zLy2W+nBHfmlbjoUBHtC3KSZsLWePSOdgOcgWErIv0KLxBAUk+9p7YwhUCfLB0HhwYL0altaGDss9FfqdEdo/KxFLhGsIqSipfRzvsQh8EauPo30re6nQtphjOwCC83A1JRm1hTq+lIXYQfBmicsg6nkYvmeg9FUOvNdb9L5/H17s36Mrz+c8nKQVA6H9N4PgVPaYH6pfaOtTXdUqQdhg+PFf/SJRR2f1XR/2Mkuuu1R9WgWSl3CjUCGQHbT3Y5OzWya1BWXR3r3aPOjiBEqwUt0VZ8Gnv1ZdWbSdl161L/8FTRQu7QnSBIahBwSbtn3JE=
+  bucket: cps847-3037
+  local_dir: .website
